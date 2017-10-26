@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อธิบายการใช้งานอุปกรณ์"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="1. นำอุปกรณ์ ECG Sensor มาจับไว้ที่ปลายนิ้ว\n2. รอการ Connect ระหว่างอุปกร์กับ Smartphone"
+            android:textColor="#000"/>
+
+        <Button
+            android:id="@+id/next2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ถัดไป"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="340dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProjectHR</string>
+    <string name="password_confirm_title">Confirm Password</string>
+    <string name="register_error_message">Register failed, Try again!</string>
+</resources>
