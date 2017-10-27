@@ -24,6 +24,8 @@ public class ConnectBluetooth extends AppCompatActivity implements OnCreateListe
         init();
         setView();
         setListener();
+
+        checkBluetoothConnect();
     }
 
     @Override
@@ -33,20 +35,23 @@ public class ConnectBluetooth extends AppCompatActivity implements OnCreateListe
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_SHORT).show();
         }
 
+
+    }
+
+    private void checkBluetoothConnect() {
         bluetoothSPP.setBluetoothStateListener(new BluetoothSPP.BluetoothStateListener() {
             @Override
             public void onServiceStateChanged(int state) {
-                if(state == BluetoothState.STATE_CONNECTED)
+                if (state == BluetoothState.STATE_CONNECTED)
                     Log.i("Check", "State : Connected");
-                else if(state == BluetoothState.STATE_CONNECTING)
+                else if (state == BluetoothState.STATE_CONNECTING)
                     Log.i("Check", "State : Connecting");
-                else if(state == BluetoothState.STATE_LISTEN)
+                else if (state == BluetoothState.STATE_LISTEN)
                     Log.i("Check", "State : Listen");
-                else if(state == BluetoothState.STATE_NONE)
+                else if (state == BluetoothState.STATE_NONE)
                     Log.i("Check", "State : None");
             }
         });
-
     }
 
     @Override
@@ -57,5 +62,11 @@ public class ConnectBluetooth extends AppCompatActivity implements OnCreateListe
     @Override
     public void setListener() {
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        checkBluetoothConnect();
     }
 }
